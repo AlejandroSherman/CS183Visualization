@@ -1,0 +1,4 @@
+# Ignore everything in this directory as files made here are just for the main script to use
+*
+# Except this file
+!.gitignore
