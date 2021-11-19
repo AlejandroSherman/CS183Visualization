@@ -35,6 +35,7 @@ make_rectangle () {
 draw_circle () {
 #n=3
 n=$1/11
+tol=$n
 if (( n < 4 ))
 then
   n=4
@@ -45,17 +46,53 @@ then
 fi
 R2=$((n*n))
 
+spaces=$""
+if (( n <= 4 ))
+then
+  spaces=$""
+  tol=5
+elif (( n <= 5 ))
+then
+  spaces=$"  "
+  tol=6
+elif (( n <= 8 ))
+then
+  spaces=$"   " 
+  tol=8
+elif (( n <= 10 ))
+then 
+  spaces=$"     "
+  tol=10 
+elif (( n <= 12 ))
+then 
+  spaces=$"       " 
+  tol=12
+elif (( n <= 14 ))
+then
+  spaces=$"         " 
+  tol=14
+elif (( n <= 16 ))
+then
+  spaces=$"            " 
+  tol=16
+elif (( n <= 18 ))
+then
+  spaces=$"             " 
+  tol=18
+fi
+
 for(( x=-n ; x<=n ; x+=2 ))
 do
   if (( x == 0 || x == 1 ))
   then
       #echo "   message"
-      echo "    $2"
+      #echo "    $2"
+      echo "$spaces$2$spaces"
   fi
   for ((y=-n ; y<=n ; y++));
   do
       d=$((x*x + y*y))
-      if [ $((d-R2)) -lt 8 ] && [ $((R2-d)) -lt 8 ]
+      if [ $((d-R2)) -lt $tol ] && [ $((R2-d)) -lt $tol ]
          then echo -n "*"
       else echo -n " "
       fi
@@ -101,7 +138,7 @@ do
           string+=$( echo "$createfil "  )
       fi
    done
-   echo "Now we pass this to paste: $string"
+   #echo "Now we pass this to paste: $string"
    #cat ${string::-1}
    paste ${string::-1}
    read -p "Hit any key to continue."
