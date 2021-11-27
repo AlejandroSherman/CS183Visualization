@@ -1,7 +1,9 @@
 -rw-r--r-- 1 root root 36 Nov  8 12:54 structure/one_lines/one1.txt
 -rw-r--r-- 1 root root 26 Nov 11 14:04 structure/one_lines/file1.txt
+-rw-r--r-- 1 root root 26 Nov 15 21:11 structure/one_lines/sample1.txt
 -rw-r--r-- 1 root root 76 Nov  8 12:55 structure/two_lines/two1.txt
 -rw-r--r-- 1 root root 76 Nov  8 12:55 structure/two_lines/two2.txt
+-rw-r--r-- 1 root root 27 Nov 16 13:33 structure/two_lines/two_one1.txt
 -rw-r--r-- 1 root root 120 Nov  8 13:01 structure/three_lines/three1.txt
 -rw-r--r-- 1 root root 120 Nov  8 13:02 structure/three_lines/three2.txt
 -rw-r--r-- 1 root root 120 Nov  8 13:02 structure/three_lines/three3.txt
